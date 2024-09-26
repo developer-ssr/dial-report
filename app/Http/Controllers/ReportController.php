@@ -26,7 +26,7 @@ class ReportController extends Controller
 
             $csvData[] = [
                 $project->name,
-                $project->status,
+                $project->status == 2 ? 'Completed' : 'Not Completed',
                 $videoCount,
                 round($totalSize, 2),
                 $project->created_at->toDateTimeString(),
